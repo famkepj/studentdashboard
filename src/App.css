@@ -1,0 +1,60 @@
+body{
+    background-color: whitesmoke;
+    margin: 30px
+}
+
+.App-header, h4{
+    background-color: blanchedalmond;
+    text-align: center;
+    margin: 0px;
+    padding: 10px;
+
+}
+
+h4, h6{
+    color:rgb(61, 66, 77);
+    text-align: center;
+    margin-top: 4%;
+}
+
+h3{
+    color:#ccffcc;
+    text-shadow: 0 0 10px black;
+}
+
+.img{
+    width: 200px;
+    margin: 20px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.card
+{
+    position: relative;
+    max-width: 90%;
+    border-radius: 10px;
+    padding-top: 5px;
+    margin: 5%;
+    color: #5a5f74;
+    text-align: center;
+    border-radius: 10px;
+    background: linear-gradient(to bottom right, #ccffcc 0%, #99ccff 100%);
+    box-shadow: 0 10px 2px -10px rgba(0, 0, 0, 0.75);
+    display: block;
+}
+
+.card .img{
+    padding: 7px;
+    border-radius: 50%;
+    border: 1px solid #28223F;
+}
+
+.nav {
+    color:aqua;
+    background-color:blanchedalmond;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
