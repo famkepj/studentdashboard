@@ -7,8 +7,8 @@ Chart.register(...registerables);
 const Aranka = ({chartDataAranka, sortedByProject, StudentProfile}) => {
 
   const ArankaData = sortedByProject.filter((person) => person.name === `Aranka`)
-
   const getChartAranka = () => {
+    chartDataAranka.labels = ArankaData.map((data) => data.project)
     chartDataAranka.datasets[0].data = ArankaData.map((data) => data.fun)
     chartDataAranka.datasets[1].data = ArankaData.map((data) => data.difficulty)
 }

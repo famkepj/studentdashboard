@@ -10,6 +10,7 @@ const Hector = ({ chartDataHector, sortedByProject, StudentProfile }) => {
   );
 
   const getChartHector = () => {
+    chartDataHector.labels = HectorData.map((data) => data.project)
     chartDataHector.datasets[0].data = HectorData.map((data) => data.fun);
     chartDataHector.datasets[1].data = HectorData.map(
       (data) => data.difficulty

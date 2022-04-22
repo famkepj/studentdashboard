@@ -9,6 +9,7 @@ const Martina = ({chartDataMartina, sortedByProject, StudentProfile}) => {
   const MartinaData = sortedByProject.filter((person) => person.name === `Martina`)
 
   const getChartMartina = () => {
+    chartDataMartina.labels = MartinaData.map((data) => data.project)
     chartDataMartina.datasets[0].data = MartinaData.map((data) => data.fun)
     chartDataMartina.datasets[1].data = MartinaData.map((data) => data.difficulty)
   }

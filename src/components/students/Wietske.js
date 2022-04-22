@@ -9,6 +9,7 @@ const Wietske = ({chartDataWietske, sortedByProject, StudentProfile}) => {
     const WietskeData = sortedByProject.filter((person) => person.name === `Wietske`)
   
     const getChartWietske = () => {
+      chartDataWietske.labels = WietskeData.map((data) => data.project)
       chartDataWietske.datasets[0].data = WietskeData.map((data) => data.fun)
       chartDataWietske.datasets[1].data = WietskeData.map((data) => data.difficulty)
     }

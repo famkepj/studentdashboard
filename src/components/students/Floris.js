@@ -10,6 +10,7 @@ const Floris = ({ chartDataFloris, sortedByProject, StudentProfile }) => {
   );
 
   const getChartFloris = () => {
+    chartDataFloris.labels = FlorisData.map((data) => data.project)
     chartDataFloris.datasets[0].data = FlorisData.map((data) => data.fun);
     chartDataFloris.datasets[1].data = FlorisData.map(
       (data) => data.difficulty

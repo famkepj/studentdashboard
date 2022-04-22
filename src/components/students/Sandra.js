@@ -10,6 +10,7 @@ const Sandra = ({ chartDataSandra, sortedByProject, StudentProfile }) => {
   );
 
   const getChartSandra = () => {
+    chartDataSandra.labels = SandraData.map((data) => data.project)
     chartDataSandra.datasets[0].data = SandraData.map((data) => data.fun);
     chartDataSandra.datasets[1].data = SandraData.map(
       (data) => data.difficulty

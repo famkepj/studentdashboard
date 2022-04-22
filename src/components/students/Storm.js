@@ -9,6 +9,7 @@ const Storm = ({chartDataStorm, sortedByProject, StudentProfile}) => {
     const StormData = sortedByProject.filter((person) => person.name === `Storm`)
   
     const getChartStorm = () => {
+      chartDataStorm.labels = StormData.map((data) => data.project)
       chartDataStorm.datasets[0].data = StormData.map((data) => data.fun)
       chartDataStorm.datasets[1].data = StormData.map((data) => data.difficulty)
     }

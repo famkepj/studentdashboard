@@ -10,6 +10,7 @@ const Maurits = ({ chartDataMaurits, sortedByProject, StudentProfile }) => {
   );
 
   const getChartMaurits = () => {
+    chartDataMaurits.labels = MauritsData.map((data) => data.project)
     chartDataMaurits.datasets[0].data = MauritsData.map((data) => data.fun);
     chartDataMaurits.datasets[1].data = MauritsData.map(
       (data) => data.difficulty

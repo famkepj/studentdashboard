@@ -10,6 +10,7 @@ const Rahima = ({ chartDataRahima, sortedByProject, StudentProfile }) => {
   );
 
   const getChartRahima = () => {
+    chartDataRahima.labels = RahimaData.map((data) => data.project)
     chartDataRahima.datasets[0].data = RahimaData.map((data) => data.fun);
     chartDataRahima.datasets[1].data = RahimaData.map(
       (data) => data.difficulty

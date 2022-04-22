@@ -52,7 +52,7 @@ const App= ()=> {
   const chartAllStudents = getAverage()
 
   const chartDataAll = ({
-    labels: chartAllStudents.map((data) => data.project),
+    labels: [],
     datasets: [{
       label: "Fun rating",
       backgroundColor: '#0bcbf2',
@@ -69,7 +69,6 @@ const App= ()=> {
     }
   ]
   })
- 
 
   return (
     <div className="App">
@@ -89,7 +88,7 @@ const App= ()=> {
           <Link className="nav-link active" to="students/Storm">Storm</Link>
         </div>
         <Routes>
-          <Route path="/" element={<Chart chartData={chartDataAll} chartAllStudents={chartAllStudents} studentNames={studentNames}/>}></Route>
+          <Route path="/" element={<Chart chartData={chartDataAll} chartAllStudents={chartAllStudents} UserData={UserData}/>}></Route>
           <Route path="students/Evelyn" element={<Evelyn chartDataEvelyn={chartDataAll} sortedByProject={sortedByProject} StudentProfile={StudentProfile}/>}></Route>
           <Route path="students/Aranka" element={<Aranka chartDataAranka={chartDataAll} sortedByProject={sortedByProject} StudentProfile={StudentProfile}/>}></Route>
           <Route path="students/Floris" element={<Floris chartDataFloris={chartDataAll} sortedByProject={sortedByProject} StudentProfile={StudentProfile}/>}></Route>
