@@ -115,78 +115,8 @@ const Chart = ({chartData, chartAllStudents, UserData}) => {
       </h6>
       <Line data={chartData}
       />
-      <h4>Table from all students Average</h4>
-      <div className="buttongroup">
-        <button
-          onClick={sortedByProjAvg}
-          type="button"
-          className="btn btn-outline-success"
-        >
-          Avg sort by project a-z
-        </button>
-        <button
-          onClick={sortedByDifAvg}
-          type="button"
-          className="btn btn-outline-warning"
-        >
-          Avg sort by difficulty 1-5{" "}
-        </button>
-        <button
-          onClick={sortedByFunAvg}
-          type="button"
-          className="btn btn-outline-info"
-        >
-          Avg sort by fun 1-5
-        </button>
-      </div>
-      <div className="buttongroup">
-        <button
-          onClick={sortedByProjBAvg}
-          type="button"
-          className="btn btn-outline-success"
-        >
-          Avg sort by project z-a
-        </button>
-        <button
-          onClick={sortedByDifBAvg}
-          type="button"
-          className="btn btn-outline-warning"
-        >
-          Avg sort by difficulty 5-1
-        </button>
-
-        <button
-          onClick={sortedByFunBAvg}
-          type="button"
-          className="btn btn-outline-info"
-        >
-          Avg sort by fun 5-1
-        </button>
-      </div>
-      <div className="tablegroup">
-      <table className="table table-striped table-hover">
-        <thead> 
-          <tr>
-            <th>Average data:</th>
-            <th onClick={sortedByProjAvg}>Project</th>
-            <th onClick={sortedByDifAvg}>Difficulty</th>
-            <th onClick={sortedByFunAvg}>Fun</th>
-          </tr>
-        </thead>  
-        <tbody className="table">
-          {chartAllStudents.map((data, index) => {
-            return (
-              <tr key={index}>
-                <td>{data.project}</td>
-                <td>{data.avgDif}</td>
-                <td>{data.avgFun}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </div>
     <h4>Table from all students - All data</h4>
+
     <div className="buttongroup">
     </div>
     <div className="buttongroup">
